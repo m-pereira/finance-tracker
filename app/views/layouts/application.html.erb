@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "FinanceTracker" %></title>
+    
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css",
+      media: 'all' %>
 
     <%= javascript_include_tag "application" %>
 
@@ -17,7 +20,6 @@
     <![endif]-->
   </head>
   <body>
-
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -42,24 +44,10 @@
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
-        <div class="col-lg-3">
-          <div class="well sidebar-nav">
-            <h3>Sidebar</h3>
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
       </div><!--/row-->
-
       <footer>
         <p>&copy; Company 2020</p>
       </footer>
-
     </div> <!-- /container -->
-
   </body>
 </html>
