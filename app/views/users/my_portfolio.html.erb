@@ -21,3 +21,9 @@
 <div id="results">
   <%= render 'result' %>
 </div>
+
+<% unless current_user.stocks.empty? %>
+  <h3>Your Stocks:</h3>
+
+  <%= render 'stocks/list' %>
+<% end %>

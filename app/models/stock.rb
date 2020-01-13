@@ -1,5 +1,9 @@
-class Stock < ApplicationRecord 
-  scope :find_by_ticker, -> (ticker_symbol) { where(ticker: ticker_symbol) }
+class Stock < ApplicationRecord
+
+  has_and_belongs_to_many :users
+
+  scope :alphabetical, -> { order(:name, :ticker) }
+  scope :by_ticker, -> (ticker_sym) { where(ticker: ticker_sym) }
  
   def self.new_from_lookup(ticker_symbol)
     begin
