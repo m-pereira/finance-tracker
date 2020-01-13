@@ -7,7 +7,8 @@
     <title><%= content_for?(:title) ? yield(:title) : "FinanceTracker" %></title>
     
     <%= csrf_meta_tags %>
-
+  
+    <%= favicon_link_tag asset_path('favicon.ico') %>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css",
       media: 'all' %>
